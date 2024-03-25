@@ -20,11 +20,20 @@ const containput=document.querySelector("#conta")
 
 
     function receberquantidadesdepessoas(evento){
+        pessoasinput.addEventListener("input", receberquantidadesdepessoas)
+        const paragrafoerro = document.querySelector(".pessoas #erro")
+        const diverro = document.querySelector(".pessoas.input-box")
+        
+        
         if(evento.target.value === "0"){
+            paragrafoerro.style.display ="block"
+            diverro.setAttribute("id", "erro-div")
+
+        }else{
+            paragrafoerro.style.display ="block"
             
-            
-            const paragrafoerro = document.querySelector(".pessoas #erro")
-            paragrafoerro.computedStyleMap.display ="block"
+            diverro.setAttribute("id", "")
+            pessoas = number(evento.target.value)
 
         }
 
