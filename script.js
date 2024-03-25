@@ -84,5 +84,11 @@ calcular()
      gorjetainput.value =" "
      pessoasinput.value = " "
 
+     document.querySelector(".total > strong").innerHTML="R$ 0.00"
+     document.querySelector(".total > strong").innerHTML = "R$0.00"
+     conta = 0
+     pessoas = 0
+     porcentagem = 0
+
 
   }
