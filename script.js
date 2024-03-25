@@ -28,17 +28,28 @@ const containput=document.querySelector("#conta")
 const botoesgorjeta = document.querySelectorAll(".gorjeta input [type = 'number']")
 botoesgorjeta.forEach(botao =>{
     botao.addEventListener('click',receberporcentagemBotao)
+   
 
 
 
 
 })
-function receberporcentagemBotao (evento){
+function receberporcentagem (evento){
 botoesgorjeta.forEach(botao => {
+
+
+    botao.classList.remove("botao-ativo")
+
+
     if(botao.value === evento.target.value){
         botao.classList.add("botao-ativo")
     }
 })
 
-  porcentagem = parseFloat(evento.target.value) /100
+if(evento.target.value  !== " "){
+    porcentagem = parseFloat(evento.target.value) /100
 }
+
+}
+ const gorjetainput = document.querySelector("#outra")
+ gorjetainput.addEventListener("input",receberporcentagemBotao)
